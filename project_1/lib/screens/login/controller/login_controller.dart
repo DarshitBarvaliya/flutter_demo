@@ -15,8 +15,8 @@ class LoginController extends GetxController {
   Future<void> userLogin() async {
     var request = http.MultipartRequest('POST', Uri.parse('https://vebbuilders.com/testapi/api/v1/login'));
     request.fields.addAll({
-      'email': 'user@gmail.com',
-      'password': '12345678'
+      'email': loginController.text,
+      'password': passwordController.text
     });
 
 
